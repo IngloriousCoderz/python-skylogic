@@ -13,8 +13,16 @@ dict([('name', 'Antony'), ('date_of_birth', '1982-10-17'), ('eyes', 2)]) # build
 
 person.items() # returns a list of tuples
 
-for key, value in person.items(): # iterate over dictionary
+# iterate over dictionary
+for key, value in person.items():
   print(key, value)
 
-for index, item in enumerate(['tic', 'tac', 'toe']): # iterate over both index and item
+# iterate over both index and item
+for index, item in enumerate(['tic', 'tac', 'toe']):
   print(index, item)
+
+# iterate over two collections
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for question, answer in zip(questions, answers): # produces tuples
+  print(f'What is your {question}?  It is {answer}.')

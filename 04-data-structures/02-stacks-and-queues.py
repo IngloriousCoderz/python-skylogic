@@ -1,7 +1,7 @@
 # lists behave as stacks already
-list = [1, 2, 3]
-list.append(4)
-list.pop()
+stack = [1, 2, 3]
+stack.append(4)
+stack.pop()
 
 # using lists as queues is slow, use deque
 from collections import deque

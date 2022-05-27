@@ -5,5 +5,5 @@
 
 from sys import argv
 
-print("Message from " + argv[0] + ":")
-print("Hello " + argv[1] + "!")
+print(f"Message from {argv[0]}:")
+print(f"Hello {argv[1]}!")
