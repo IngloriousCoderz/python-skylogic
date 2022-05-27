@@ -1,8 +1,9 @@
-# import this file as in main
+# Define this function, then go to main.py
 
 def sum(a, b):
   return a + b
 
+# After playing with main, promote this module to script as below
 
 # Usage:
 # python calculator.py 2 3

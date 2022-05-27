@@ -1,3 +1,5 @@
+# Type these in the interpreter after creating calculator.py
+
 # calculator # raises error
 import calculator
 calculator.__name__ # 'calculator'
@@ -32,3 +34,22 @@ sys.builtin_module_names
 sys.path
 # ['', '/usr/lib/python310.zip', '/usr/lib/python3.10',
 #  '/usr/lib/python3.10/lib-dynload', '/usr/lib/python3.10/site-packages']
+
+# Speaking of sys, let's read and change primary and secondary prompts:
+
+sys.ps1
+sys.ps2
+sys.ps1 = 'Type here: > '
+sys.ps2 = 'Continued... '
+
+import calculator, sys # import multiple modules in the same line
+
+# Check names defined by modules
+dir(calculator) # ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'sum']
+dir(sys) # a long list of names
+dir() # all names currently defined
+
+# dir() doesn't list the names of built-in functions and variables, this does:
+
+import builtins
+dir(builtins)
