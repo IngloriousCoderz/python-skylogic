@@ -7,3 +7,6 @@
 5 * 3 + 2 # floored quotient * divisor + remainder
 2 ** 3 # power
 3 + 5j # complex numbers!
+
+1_000_000 # big numbers can use _ as a separator
+10_00_00_0 # you can place it anywhere
