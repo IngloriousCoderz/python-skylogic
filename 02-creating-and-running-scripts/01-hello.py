@@ -1,7 +1,7 @@
 # Usage:
-# python hello.py world
+# python 01-hello.py world
 # or
-# python -m hello world
+# python -m 01-hello world
 
 from sys import argv
 
