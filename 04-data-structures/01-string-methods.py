@@ -3,6 +3,7 @@ message.upper() # 'HELLO WORLD!'
 message.title() # 'Hello World!'
 message.center(20) # '    hello world!    '
 message.split(' ') # ['Hello', 'world!']
+'/'.join(('home', 'iceonfire', 'projects')) # home/iceonfire/projects
 
 # Remember: strings are immutable!
 
