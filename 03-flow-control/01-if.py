@@ -1,6 +1,6 @@
 number = 42
 
-guess = int(input('Guess my number: ')) # user input and conversion!
+guess = int(input('Guess my number: '))
 
 if guess < number:
   print('Too low')

@@ -7,6 +7,7 @@
 r'Some\name' # Or prepend 'r' for raw strings
 who = 'ma'
 f"Hello {who * 2}!" # 'f' interpolates Python expressions
+b'Octect string' # sequence of bytes, convert to string with str.decode()
 
 '''
 String

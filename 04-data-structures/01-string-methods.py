@@ -2,6 +2,9 @@ message = 'hello world!'
 message.upper() # 'HELLO WORLD!'
 message.title() # 'Hello World!'
 message.center(20) # '    hello world!    '
+'Remove newline \n'.rstrip() # Removes any trailing space and newline
+b'Octect string'.decode() # convert to string
+
 message.split(' ') # ['Hello', 'world!']
 '/'.join(('home', 'iceonfire', 'projects')) # home/iceonfire/projects
 
