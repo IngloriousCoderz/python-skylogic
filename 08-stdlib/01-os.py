@@ -19,3 +19,8 @@ shutil.rmtree('files')
 import glob
 
 print(glob.glob('*.py')) # ['01-os.py', '02-args-parsing.py']
+
+import sys
+
+sys.exit(1) # quit the program with an error
+sys.exit('An error occurred.') # use a custom message
