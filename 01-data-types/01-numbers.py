@@ -6,7 +6,8 @@
 17 % 3  # remainder operator = 2
 5 * 3 + 2 # floored quotient * divisor + remainder
 2 ** 3 # power
-3 + 5j # complex numbers!
+.1 # you can omit the 0 on floating point numbers
+3 + 5j # Python has built-in complex numbers!
 
 1_000_000 # big numbers can use _ as a separator
 10_00_00_0 # you can place it anywhere
