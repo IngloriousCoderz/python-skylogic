@@ -36,3 +36,5 @@ for (title, is_done) in cursor:
   print(f'Title: {title}, is_done: {is_done}')
 
 connection.close()
+
+# for OracleDB @see https://cx-oracle.readthedocs.io/en/latest/user_guide/installation.html#quick-start-cx-oracle-installation
