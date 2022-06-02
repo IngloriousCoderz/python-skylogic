@@ -56,3 +56,6 @@ print('Starting threads with a pool...')
 with ThreadPoolExecutor(max_workers=4) as executor:
   results = executor.map(long_task, numbers)
 print('Tasks', [result for result in results], ': all done.')
+
+# For more asynchronous I/O @see https://docs.python.org/3/library/asyncio.html
+# For asynchronous HTTP @see https://docs.aiohttp.org/en/stable/
