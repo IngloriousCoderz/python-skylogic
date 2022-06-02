@@ -1,7 +1,8 @@
 from kafka import KafkaProducer
 
-producer = KafkaProducer(bootstrap_servers='localhost:1234')
+producer = KafkaProducer()
 for _ in range(100):
-  producer.send('foobar', b'some_message_bytes')
+  producer.send('python', b'Python is awesome!')
+producer.flush()
 
 # For extra producer features @see https://kafka-python.readthedocs.io/en/master/#kafkaproducer
