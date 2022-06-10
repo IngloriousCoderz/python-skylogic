@@ -6,13 +6,12 @@ a == True
 a is True
 a != True
 a is not True
-not a
 
-
+not a # equivalent to ! in other languages
 
 b = False
-a and b
-a or b
+a and b # equivalent to && in other languages
+a or b # equivalent to || in other languages
 
 1 < 2
 1 <= 2
