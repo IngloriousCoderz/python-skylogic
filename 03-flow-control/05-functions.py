@@ -18,18 +18,27 @@ def to_be_implemented(): # use snake case as a naming convention
 def create_point(x=0, y=0): # default argument values
   return [x, y]
 
- # positional argument + keyword argument
-print(sum(2, b=3)) # kw args must always follow pos args
+print(create_point(4, 2))
+# positional argument
+print(create_point(4))
+# keyword argument
+print(create_point(y=4))
+print(create_point(y=-1, x=1))
+# positional argument + keyword argument
+print(create_point(2, y=3)) # kw args must always follow pos args
+# print(create_point(x=2, 3)) # can't put positional arguments after kw arguments
 
 # dynamic positional and keyword arguments
-def define_person(name, *arguments, **keywords):
+def define_person(name, *arguments, arms, **keywords):
   print(name)
   for arg in arguments:
     print(arg)
+
+  print(arms)
   for kw in keywords:
     print(f"{kw}: {keywords[kw]}")
 
-define_person('Antony', 'JavaScript', 'Python', date_of_birth='1982-10-17', eyes=2)
+define_person('Antony', 'JavaScript', 'Python', arms=2, date_of_birth='1982-10-17', eyes=2)
 
 # For extra features of function @see https://docs.python.org/3/tutorial/controlflow.html#special-parameters
 
@@ -47,5 +56,6 @@ def sum(a: float, b:float) -> float:
 
 print(sum.__doc__)
 print(sum.__annotations__)
+print(sum('a', 'b')) # it's not static typing, this still works!
 
 # functions can mute code without having to comment it out!

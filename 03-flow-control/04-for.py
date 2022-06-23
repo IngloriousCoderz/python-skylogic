@@ -18,8 +18,8 @@ for even in range(2, 12, 2): # optional start and step
 print('Sum of first 4 numbers:')
 print(sum(range(1, 5))) # built-in function
 
-for i in len(range(6)): # similar to the classic 'for' loop
-  print(i)
+for i in range(len(items)):# similar to the classic 'for' loop
+  print(i, items[i])
 
 # break and else
 for num in range(1, 6):
@@ -37,5 +37,5 @@ for num in range(1, 6):
   print("Found an odd number:", num)
 
 # pass is a placeholder for doing nothing
-while 1 == 1:
+while True:
   pass

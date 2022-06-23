@@ -3,7 +3,7 @@ message.upper() # 'HELLO WORLD!'
 message.title() # 'Hello World!'
 message.center(20) # '    hello world!    '
 'Remove newline \n'.rstrip() # Removes any trailing space and newline
-b'Octect string'.decode() # convert to string
+b'Octet string'.decode() # convert to string
 
 message.split(' ') # ['Hello', 'world!']
 '/'.join(('home', 'iceonfire', 'projects')) # home/iceonfire/projects
@@ -11,3 +11,6 @@ message.split(' ') # ['Hello', 'world!']
 # Remember: strings are immutable!
 
 # For extra features of string @see https://www.w3schools.com/python/python_ref_string.asp
+
+'00:AC:B2'.split(':')
+':'.join(['00', 'AC', 'B2'])
