@@ -1,10 +1,13 @@
 import zlib
 
 message = b"she sells sea shells on the sea shore. the shells that she sells are sea shells i'm sure."
-print(len(message))
+message #?
+len(message) #?
 
-compressed = zlib.compress(message)
-print(len(compressed))
+compressed_message = zlib.compress(message)
+compressed_message #?
+len(compressed_message) #?
 
-decompressed = zlib.decompress(compressed)
-print(len(decompressed))
+decompressed_message = zlib.decompress(compressed_message)
+decompressed_message #?
+len(decompressed_message) #?

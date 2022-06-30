@@ -25,3 +25,5 @@ try:
   raise KeyboardInterrupt
 finally: # executed as the last task before the try statement completes
   print('Goodbye world!')
+
+print('Hello again!') # This will never printed

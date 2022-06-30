@@ -22,7 +22,7 @@ print(create_point(4, 2))
 # positional argument
 print(create_point(4))
 # keyword argument
-print(create_point(y=4))
+print(create_point(y=2))
 print(create_point(y=-1, x=1))
 # positional argument + keyword argument
 print(create_point(2, y=3)) # kw args must always follow pos args

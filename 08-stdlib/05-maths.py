@@ -5,10 +5,11 @@ math.log(1024, 2) # 10.0
 
 import random
 
+random.random() # floating point between 0 and 1
+int(random.random() * 6 + 1) # die values
+random.randrange(1, 7) # integer between 1 and 6
 random.choice(['apple', 'orange', 'banana']) # random item from the list
 random.sample(range(100), 10) # list of 10 numbers from 0 to 199
-random.random() # floating point between 0 and 1
-random.randrange(6) # integer between 0 and 5
 
 import statistics
 data = [7, 7, 8, 6, 9, 7, 5, 6]

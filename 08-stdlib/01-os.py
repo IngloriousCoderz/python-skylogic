@@ -16,9 +16,9 @@ shutil.rmtree('files')
 
 # For extra features of shutil @see https://docs.python.org/3/library/shutil.html#module-shutil
 
-import glob
+from glob import glob
 
-print(glob.glob('*.py')) # ['01-os.py', '02-args-parsing.py']
+print(glob('*.py')) # ['01-os.py']
 
 import sys
 

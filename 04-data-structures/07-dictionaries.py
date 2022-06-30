@@ -3,6 +3,7 @@ person['name'] # there is no dot notation, like 'person.name'
 person['nose'] = 1 # add
 person['nose'] = 2 # change
 del person['nose'] # delete
+
 list(person) # list of keys
 sorted(person) # sorted list of keys
 'name' in person # returns True
@@ -11,7 +12,10 @@ dict([('name', 'Antony'), ('date_of_birth', '1982-10-17'), ('eyes', 2)]) # build
 
 # For extra features of dict @see https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
 
-person.items() # returns a list of tuples
+list(person.items()) # returns a list of tuples
+
+for key in person:
+  print(key)
 
 # iterate over dictionary
 for key, value in person.items():
@@ -22,7 +26,9 @@ for index, item in enumerate(['tic', 'tac', 'toe']):
   print(index, item)
 
 # iterate over two collections
-questions = ['name', 'quest', 'favorite color']
-answers = ['lancelot', 'the holy grail', 'blue']
-for question, answer in zip(questions, answers): # produces tuples
-  print(f'What is your {question}?  It is {answer}.')
+questions = ['name', 'favorite language', 'favorite color']
+answers = ['Antony', 'JavaScript', 'indigo']
+
+print(list(zip(questions, answers)))
+for question, answer in zip(questions, answers):
+  print(f"What is your {question}? It is {answer}")

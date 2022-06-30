@@ -2,9 +2,9 @@ name = 'Antony'
 language = 'Python'
 f'My name is {name} and I <3 {language.upper()}!'
 
-'My name is {0} and I <3 {1}!'.format(name, language.upper())
-'My name is {name} and I <3 {language}!'.format(name=name, language=language.upper())
 'My name is {} and I <3 {}!'.format('Antony', 'Python')
+'My name is {1} and I <3 {0}!'.format(name, language.upper())
+'My name is {name} and I <3 {language}!'.format(name=name, language=language.upper())
 
 othree = 0.1 + 0.2
 othree # 0.30000000000000004

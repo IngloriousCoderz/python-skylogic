@@ -9,9 +9,9 @@ with urlopen('http://worldtimeapi.org/api/timezone/etc/UTC.txt') as response:
 from urllib.request import urlopen
 import json
 
-with urlopen('https://swapi.dev/api/people/1/') as response:
+with urlopen('http://worldtimeapi.org/api/timezone/etc/UTC.json') as response:
   body = json.loads(response.read())
-  print(body)
+  print(body['datetime'])
 
 # Code copied from https://docs.python.org/3/tutorial/stdlib.html
 
@@ -41,7 +41,8 @@ with smtplib.SMTP_SSL('smtp.gmail.com', port=465, context=context) as server:
     'antony.mistretta@gmail.com',
     """Subject: Hello
 
-Hello from Python!"""
+    Hello from Python!
+    """
   )
 
 # For extra email features @see https://docs.python.org/3/library/email.html

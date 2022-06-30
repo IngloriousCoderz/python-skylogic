@@ -8,7 +8,7 @@ except FileNotFoundError:
   print('File not found')
 finally:
   if f is not None:
-    print('Closing file...')
+    print('Closing file...', end=' ')
     f.close()
     print('Done.')
 

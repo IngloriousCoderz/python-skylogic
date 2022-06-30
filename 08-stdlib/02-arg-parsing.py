@@ -11,8 +11,9 @@ parser.add_argument('b', type=int, help="Second number")
 parser.add_argument('-v', '--verbose', action='store_true', help='Pretty print the result')
 
 namespace = parser.parse_args()
+print(namespace) # prints the namespace object
 args = vars(namespace) # built-in function, @see https://docs.python.org/3/library/argparse.html#the-namespace-object
-print(args)
+print(args) # same as print(namespace.__dict__)
 
 result = args['a'] + args['b']
 
