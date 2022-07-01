@@ -1,7 +1,7 @@
 import logging
 
 # Try without and with this line, which must be at the top
-# logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG, filename='example.log')
 
 logging.debug('Debug message')
 logging.info('Informational message')

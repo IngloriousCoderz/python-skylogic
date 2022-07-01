@@ -9,7 +9,6 @@ root = ET.fromstring('''
 </data>
 ''')
 
-
 print(root[0][1].text) # '1861'
 print(ET.dump(root)) # prints the xml + 'None': why? See below
 ET.dump(root) # dumps to stdout

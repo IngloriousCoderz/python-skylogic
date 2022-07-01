@@ -8,7 +8,8 @@ sys.path
 
 # Activate the virtual environment
 # Windows:
-.venv\Scripts\activate.bat
+.venv\Scripts\Activate.ps1 # for Powershell
+.venv\Scripts\activate.bat # for Command Prompt
 # Unix:
 source .venv/bin/activate
 

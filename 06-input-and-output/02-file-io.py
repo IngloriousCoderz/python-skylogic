@@ -35,4 +35,4 @@ for line in f:
   print(line, end='')
 
 with open('students.csv', 'a', encoding='utf-8') as f:
-  f.write('Neville,Longbottom') # writes the line and returns number of characters written
+  f.write('Neville,Longbottom\n') # writes the line and returns number of characters written

@@ -18,18 +18,18 @@ except (RuntimeError, TypeError, NameError):
 
 # Catching exceptions individually
 
-import sys
-
 try:
   f = open('myfile.txt')
   s = f.readline()
   i = int(s.strip())
-except OSError as err:
-  print("OS error: {0}".format(err))
-except ValueError:
-  print("Could not convert data to an integer.")
-except BaseException as err: # all exceptions inherit from BaseException, so we can catch anything that wasn't caught before
+  print(i)
+except FileNotFoundError as err:
+  print('File not found', err)
+except ValueError as err:
+  print('Could not convert value to int', err)
+except BaseException as err:
   print(f"Unexpected {err=}, {type(err)=}")
+
 
 # The else clause is executed after the try if no exception was raised, Python-only
 

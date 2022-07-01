@@ -5,6 +5,7 @@ print(cwd)
 
 os.mkdir('files')
 os.chdir('/home/iceonfire')
+print(os.getcwd())
 os.system('touch myfile.txt')
 
 import shutil

@@ -19,9 +19,9 @@ cursor.executemany("INSERT INTO tasks VALUES (?, ?)", values)
 
 connection.commit()
 
-cursor.execute("SELECT * from tasks WHERE is_done = :is_done", {'is_done': True}) # you can use named args instead of positional
+cursor.execute("SELECT * FROM tasks WHERE is_done = :is_done", {'is_done': True}) # you can use named args instead of positional
 
 for (title, is_done) in cursor:
-  print(f'Title: {title}, is_done: {is_done}')
+  print(f'title: {title}, is_done: {is_done}')
 
 connection.close()

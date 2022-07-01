@@ -1,5 +1,11 @@
-raise NameError('What an ugly name!')
-raise ValueError # same as raise ValueError()
+def sum(a, b):
+  if a is None:
+    raise ValueError('You should give a value to the first parameter')
+  if b is None:
+    raise ValueError('You should give a value to the second parameter')
+  return a + b
+
+sum(41, None)
 
 try:
   raise NameError('What an ugly name!')
@@ -22,8 +28,12 @@ except OSError:
   raise RuntimeError from None # prevents chaining
 
 try:
-  raise KeyboardInterrupt
-finally: # executed as the last task before the try statement completes
+  while True:
+    print('Hello world!')
+except KeyboardInterrupt:
+  print('Did you press Ctrl-C?')
+  raise
+finally:
   print('Goodbye world!')
 
-print('Hello again!') # This will never printed
+print('Hello again!')
