@@ -1,6 +1,6 @@
 # @see https://www.datacamp.com/tutorial/making-http-requests-in-python
 
-import requests # isntalled via pip
+import requests # installed via pip
 
 response = requests.get('https://swapi.dev/api/people/1/')
 print(response.status_code)

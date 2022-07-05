@@ -30,7 +30,12 @@ cursor.executemany("INSERT INTO tasks VALUES (?, ?)", values)
 
 connection.commit()
 
-cursor.execute("SELECT * from tasks WHERE is_done = :is_done", {'is_done': True})
+cursor.execute('''
+  SELECT *
+  FROM tasks
+  WHERE is_done = ?
+''', (True,))
+# cursor.execute("SELECT * FROM tasks WHERE is_done = :is_done", {'is_done': True})
 
 for (title, is_done) in cursor:
   print(f'Title: {title}, is_done: {is_done}')

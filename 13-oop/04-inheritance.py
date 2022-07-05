@@ -14,11 +14,15 @@ class Dog(Person):
 
   def speak(self):
     message = super().speak()
-    tokens = message.split('!')
-    return f"Woof!{tokens[1]}"
+    (_,rest) = message.split('! ')
+    return f"Woof! {rest}"
+  
+  def bark(self):
+    return 'Bark!'
 
 dog = Dog('Arya', 'Mistretta', '2014-12-10')
 dog.speak() #?
-
+dog.bark() #?
+dog.legs #?
 # You can even achieve some sort of multiple inheritance, @see https://docs.python.org/3/tutorial/classes.html#multiple-inheritance
 # For private variables @see https://docs.python.org/3/tutorial/classes.html#private-variables

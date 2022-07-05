@@ -19,3 +19,24 @@ class Calculator:
     return a + b
 
 Calculator.sum(2, 3) #?
+
+# singleton
+
+class Calculator:
+  calculator = None
+
+  @staticmethod
+  def get_instance():
+    if Calculator.calculator is None:
+       Calculator.calculator = Calculator()
+    return Calculator.calculator
+
+calculator1 = Calculator.get_instance() #?
+calculator2 = Calculator.get_instance() #?
+print(calculator1 is calculator2)
+
+# dependency injection
+
+class Math:
+  def __init__(self, calculator): # this instance will be injected by some DI framework
+    pass
