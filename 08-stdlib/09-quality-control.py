@@ -1,12 +1,15 @@
 from typing import Iterable
 
 
-def average(values: Iterable) -> float:
+def average(values: Iterable[float]) -> float:
   """
   Computes the arithmetic mean of a sequence of numbers.
   
   >>> print(average([20, 30, 70]))
   40.0
+
+  # >>> print(average([20, 30, 50]))
+  # 40.0
   """
   return sum(values) / len(values)
 

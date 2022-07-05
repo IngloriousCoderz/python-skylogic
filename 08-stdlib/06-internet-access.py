@@ -13,8 +13,9 @@ with urlopen('http://worldtimeapi.org/api/timezone/etc/UTC.json') as response:
   body = json.loads(response.read())
   print(body['datetime'])
 
-# Code copied from https://docs.python.org/3/tutorial/stdlib.html
+# Code copied from https://docs.python.org/3/tutorial/stdlib.html#internet-access
 
+# TODO: remove after you create a function that actually works
 def doesnt_work():
   import smtplib
 
