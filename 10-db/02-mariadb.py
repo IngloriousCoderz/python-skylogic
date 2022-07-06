@@ -6,10 +6,10 @@ import mariadb, sys
 
 try:
   connection = mariadb.connect(
-    user='root',
-    password='burp',
     host='127.0.0.1',
     port=3306,
+    user='root',
+    password='burp',
     database='skylogic'
   )
 except mariadb.Error as error:
@@ -20,13 +20,13 @@ cursor = connection.cursor()
 
 cursor.execute("CREATE TABLE tasks (title VARCHAR(255), is_done BOOL)")
 
-values = [
+tasks = [
   ('Learn Python', True),
   ('Look for a job', False),
   ('Forget everything', False)
 ]
 
-cursor.executemany("INSERT INTO tasks VALUES (?, ?)", values)
+cursor.executemany("INSERT INTO tasks VALUES (?, ?)", tasks)
 
 connection.commit()
 
@@ -35,10 +35,16 @@ cursor.execute('''
   FROM tasks
   WHERE is_done = ?
 ''', (True,))
-# cursor.execute("SELECT * FROM tasks WHERE is_done = :is_done", {'is_done': True})
 
-for (title, is_done) in cursor:
-  print(f'Title: {title}, is_done: {is_done}')
+# this won't work with MariaDB
+# cursor.execute("""
+#   SELECT *
+#   FROM tasks
+#   WHERE is_done = :is_done
+# """, {'is_done': True})
+
+# for (title, is_done) in cursor:
+#   print(f'title: {title}, is_done: {is_done}')
 
 connection.close()
 

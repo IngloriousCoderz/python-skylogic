@@ -15,3 +15,7 @@ person.speak() #?
 another_person = Person('Geroge', 'Jetson', '2022-08-22')
 another_person.speak() #?
 # another_person.speak(person) # one argument passed, but it's seen as two #?
+
+another_person.legs # as instance attribute #?
+Person.legs # an static attribute #?
+another_person.__init__ #?

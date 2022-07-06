@@ -9,19 +9,32 @@ cursor = connection.cursor()
 
 cursor.execute("CREATE TABLE tasks (text, is_done)")
 
-values = [
+tasks = [
   ('Learn Python', True),
   ('Look for a job', False),
   ('Forget everything', False)
 ]
 
-cursor.executemany("INSERT INTO tasks VALUES (?, ?)", values)
+cursor.executemany("INSERT INTO tasks VALUES (?, ?)", tasks)
 
-connection.commit()
+cursor.execute("""
+  SELECT *
+  FROM tasks
+  WHERE is_done = ?
+""", (True,))
 
-cursor.execute("SELECT * FROM tasks WHERE is_done = :is_done", {'is_done': True}) # you can use named args instead of positional
+for row in cursor:
+  print(f'title: {row[0]}, is_done: {row[1]}')
+
+cursor.execute("""
+  SELECT *
+  FROM tasks
+  WHERE is_done = :is_done
+""", {'is_done': True})
 
 for (title, is_done) in cursor:
+  # title = row[0]
+  # is_done = row[1]
   print(f'title: {title}, is_done: {is_done}')
 
 connection.close()
