@@ -5,6 +5,8 @@ class Calculator:
 calculator = Calculator()
 calculator.sum(2, 3) #?
 
+Calculator.sum(None, 2, 3) #?
+
 class Calculator:
   def sum(a=0, b=0): # NOTE: we are not using 'self' anymore
     return a + b
@@ -33,7 +35,7 @@ class Calculator:
 
 calculator1 = Calculator.get_instance() #?
 calculator2 = Calculator.get_instance() #?
-print(calculator1 is calculator2)
+print(calculator1 is calculator2) #?
 
 # dependency injection
 

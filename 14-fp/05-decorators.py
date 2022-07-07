@@ -1,5 +1,5 @@
 def say_hello():
-  return 'hello world!'
+  return 'Hello world!'
 
 print('Logging no-arg function:')
 
@@ -24,7 +24,10 @@ def add_logging(func, *args):
 
 print(add_logging(subtract, 2, 3))
 
-print('Higher-order function:')
+print('Logging with currying:')
+
+def add(a, b):
+  return a + b
 
 def add_logging(func):
   def inner_func(*args):
@@ -37,6 +40,11 @@ def add_logging(func):
 
 subtract_with_logging = add_logging(subtract)
 print(subtract_with_logging(2, 3))
+print(subtract_with_logging(17, 12))
+
+add_with_logging = add_logging(add)
+print(add_with_logging(2, 3))
+print(add_with_logging(17, 12))
 
 print('Decorator:')
 
@@ -51,10 +59,10 @@ print('Cached results:')
 from functools import cache
 
 @cache
-def performant_factorial(n):
-  print('Computing factorial of ', n)
-  return n * performant_factorial(n - 1) if n > 1 else 1
+def factorial(n):
+  print('Computing factorial of', n)
+  return n * factorial(n - 1) if n > 2 else 2
 
-print('Factorial of 5:', performant_factorial(5))
-print('Factorial of 3:', performant_factorial(3))
-print('Factorial of 7:', performant_factorial(7))
+print('Recursive factorial of 5:', factorial(5))
+print('Recursive factorial of 3:', factorial(3))
+print('Recursive factorial of 7:', factorial(7))

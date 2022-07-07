@@ -1,18 +1,19 @@
-person = {'name': 'Matteo Antony', 'age': 39 }
+person = {'name': 'Matteo Antony', 'age': 39}
 
-def impure_increase_age(person):
-  person['age'] += 1
-  return person
+def impure_increase_age(person, amount):
+  person['age'] += amount
 
-new_person = impure_increase_age(person) #?
-person #?
-print(new_person == person)
+previous_age = person['age'] #?
+impure_increase_age(person, 7) #?
+age = person['age'] #?
+print(age > previous_age)
 
-def pure_increase_age(person):
+def pure_increase_age(person, amount):
   new_person = person.copy()
-  new_person['age'] += 1
+  new_person['age'] += amount
   return new_person
 
-new_person = pure_increase_age(person) #?
-person #?
+new_person = pure_increase_age(person, 7) #?
+person['age'] #?
+new_person['age'] #?
 print(new_person == person)

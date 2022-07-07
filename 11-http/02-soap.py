@@ -1,8 +1,8 @@
 # Example copied from https://documenter.getpostman.com/view/8854915/Szf26WHn
 
-import http.client # native
+from http.client import HTTPSConnection # native
 
-conn = http.client.HTTPSConnection("www.dataaccess.com")
+conn = HTTPSConnection("www.dataaccess.com")
 payload = '''\
 <?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -44,6 +44,7 @@ print(response.text)
 
 # root = ET.fromstring(response.text)
 # print(root.find('//NumberToWordsResult').text)
+# print(root[0][0][0].text)
 
 from zeep import Client # installed via pip
 
